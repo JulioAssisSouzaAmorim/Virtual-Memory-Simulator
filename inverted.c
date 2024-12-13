@@ -36,8 +36,8 @@ int main(int argc, char *argv[]) {
 
     // Configurar os parâmetros do simulador
     strncpy(replacement_algo, argv[1], sizeof(replacement_algo) - 1);
-    page_size = atoi(argv[3]);
-    mem_size = atoi(argv[4]);
+    page_size = atoi(argv[3]) * 1024;
+    mem_size = atoi(argv[4]) * 1024;
     num_frames = mem_size / page_size;
 
     // Inicializar tabela invertida
